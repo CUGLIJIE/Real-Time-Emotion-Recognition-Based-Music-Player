@@ -10,6 +10,7 @@ This Project is an extension from the Live Emotion Detection Project by Atul Par
 
 * Python 3, [OpenCV 3 or 4](https://opencv.org/), [Tensorflow 2](https://www.tensorflow.org/), [Python-VLC](https://pypi.org/project/python-vlc/), Tkinter
 * To install the required packages, run `pip install -r requirements.txt`.
+may be install python3-tk ,run 'sudo apt install python3-tk'
 
 ## Usage
 
