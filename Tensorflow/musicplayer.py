@@ -57,7 +57,8 @@ class MusicPlayer(object):
     scrol_y.config(command=self.playlist.yview)
     self.playlist.pack(fill=BOTH)
     # Changing Directory for fetching Songs
-    os.chdir(str(Path(__file__).parent.absolute())+"\songs\\"+emotionStr+"\\")
+    #os.chdir(str(Path(__file__).parent.absolute())+"\songs\\"+emotionStr+"\\")
+    os.chdir(str(Path(__file__).parent / "songs" / emotionStr))
     # Fetching Songs
     songtracks = os.listdir()
     self.songtracks = songtracks

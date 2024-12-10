@@ -41,7 +41,6 @@ model.add(Dense(1024, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(7, activation='softmax'))
 
-
 model.load_weights('model.h5')
 
 print('\n Welcome to Music Player based on Facial Emotion Recognition \n')
@@ -59,6 +58,7 @@ with open(str(Path.cwd())+"\emotion.txt","w") as emotion_file:
     cap = cv2.VideoCapture(0)
     now = time.time()  ###For calculate seconds of video
     future = now + 10
+    text = "Neutral"
     while True:
         # Find haar cascade to draw bounding box around face
         ret, frame = cap.read()
@@ -79,7 +79,7 @@ with open(str(Path.cwd())+"\emotion.txt","w") as emotion_file:
             emotion_file.write(emotion_dict[maxindex]+"\n")
             emotion_file.flush()
 
-        cv2.imshow('Video', cv2.resize(frame,(1600,960),interpolation = cv2.INTER_CUBIC))
+        cv2.imshow('Video', cv2.resize(frame,(800,480),interpolation = cv2.INTER_CUBIC))
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break 
 
